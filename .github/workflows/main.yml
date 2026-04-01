@@ -1,0 +1,33 @@
+---
+name: "Simple Github Actions Workflow"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+
+     steps: 
+       -name: "Running date command"
+        run: date
+
+       -name: "OS details"
+        run: cat /etc/os-release
+
+        -name: "Currnet working directory and details"
+         run: 
+           pwd
+           ls -l
+
+        -name: "Installing packer"
+         run: 
+            wget https://releases.hashicorp.com/packer/1.15.1/packer_1.15.1_linux_amd64.zip
+            unzip packer_1.15.1_linux_amd64.zip
+
+         -name: "Currnet working directory details after packer install"
+         run: 
+           pwd
+           ls -l
