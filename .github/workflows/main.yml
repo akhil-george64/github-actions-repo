@@ -28,6 +28,6 @@ jobs:
             unzip packer_1.15.1_linux_amd64.zip
 
          -name: "Currnet working directory details after packer install"
-         run: 
+          run: 
            pwd
            ls -l
