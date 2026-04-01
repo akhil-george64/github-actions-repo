@@ -1,3 +1,11 @@
+---
+name: "Simple Github Actions Workflow"
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
